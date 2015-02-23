@@ -2,22 +2,29 @@ TEMPLATE = app
 
 TARGET = dashboard
 
-QT += core gui widgets
+QT += core gui widgets xml qml
 
 SOURCES += main.cpp \
     speedconverter.cpp \
-    dialog.cpp
+    dialog.cpp \
+    source/qcgaugewidget.cpp
 
-# RESOURCES += qml.qrc
+RESOURCES +=
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
-
 # Default rules for deployment.
 include(deployment.pri)
 
 HEADERS += \
     speedconverter.h \
-    dialog.h
+    dialog.h \
+    source/qcgaugewidget.h
 
 FORMS += dialog.ui
+
+DISTFILES += \
+    MedidorAceite.qml \
+    MedidorAceite.qml
+
+RESOURCES +=

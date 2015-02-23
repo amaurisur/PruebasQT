@@ -1,5 +1,10 @@
 # Archivos de QR
 build-[*]/
+[*]build-[*]
+
+#Archivos Comprimidos
+*.7z
+*.zip
 
 # Windows image file caches
 Thumbs.db

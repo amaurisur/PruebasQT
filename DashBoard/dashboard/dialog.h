@@ -2,7 +2,9 @@
 #define DASHBOARD_H
 
 #include <QDialog>
+#include <QtWidgets>
 #include "speedconverter.h"
+#include "./source/qcgaugewidget.h"
 
 namespace Ui{
     class Dialog;
@@ -17,8 +19,22 @@ public:
     ~Dialog();
 
 private:
+    int hombreVivo();
+
+private slots:
+    void actualizaVelocimetro(int value);
+    void actualizarHombreMuerto();
+
+private:
     Ui::Dialog *ui;
     SpeedConverter *speedConverter;
+
+    QcGaugeWidget *velocimetroAnalogico;
+    QcNeedleItem *aguja;
+
+    QStateMachine machine;
+    QState *vivo;
+    QState *muerto;
 };
 
 #endif // DASHBOARD_H

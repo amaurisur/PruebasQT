@@ -1,5 +1,5 @@
 #include <QApplication>
-// #include <QQmlApplicationEngine>
+#include <QQmlApplicationEngine>
 #include "dialog.h"
 
 int main(int argc, char *argv[])
@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     consolaTrain.show();
 
     //QQmlApplicationEngine engine;
-    //engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
+    //engine.load(QUrl(QStringLiteral("qrc:/MedidorAceite.qml")));
 
     return app.exec();
 }
