@@ -3,8 +3,9 @@ build-[*]/
 [*]build-[*]
 
 #Archivos Comprimidos
+[*].pro.user
 *.7z
-*.zip
+# *.zip
 
 # Windows image file caches
 Thumbs.db
