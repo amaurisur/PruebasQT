@@ -5,6 +5,7 @@
 #include <QtWidgets>
 #include "speedconverter.h"
 #include "./source/qcgaugewidget.h"
+#include "botonerapuerta.h"
 
 namespace Ui{
     class Dialog;
@@ -19,22 +20,33 @@ public:
     ~Dialog();
 
 private:
-    int hombreVivo();
+
 
 private slots:
     void actualizaVelocimetro(int value);
     void actualizarHombreMuerto();
+    boolean initMaquinaHombreVivo(int pos);
+    boolean MachineBotonesPuertas(int);
 
 private:
+    //LayOut principal
     Ui::Dialog *ui;
+    //Convertidor de velocidad.
     SpeedConverter *speedConverter;
 
+    //Velocimetro analogico
     QcGaugeWidget *velocimetroAnalogico;
     QcNeedleItem *aguja;
+    //Maquina de estados Hombre Muerto-Vivo
+    QStateMachine machineHombreVivo;
+    QState *State_Hombrevivo;
+    QState *State_HombreMuerto;
+    QState *State_StartSistemaHombreVivo;
+    QFinalState *State_EndSistemaHombreVivo;
 
-    QStateMachine machine;
-    QState *vivo;
-    QState *muerto;
+    //Maquina de Estados Botonera (derecha)
+    BotoneraPuerta *machineBotoneraDerecha;
+    BotoneraPuerta *machineBotoneraIzquierda;
 };
 
 #endif // DASHBOARD_H

@@ -26,6 +26,7 @@ int SpeedConverter::getVelocidadKMH()const{
 void SpeedConverter::setVelocidad(int v){
     if(this->m_velocidad == v) return;
     this->m_velocidad = v;
+    // Notifica a los interesados.
     emit velocidadChanged(getVelocidadKMH());
     emit velocidadChangedMPH(getVelocidadMPH());
 }

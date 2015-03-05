@@ -1,13 +1,11 @@
 #include "dialog.h"
 #include "ui_dialog.h"
+#include "botonerapuerta.h"
 
 Dialog::Dialog(QWidget *parent):
     QDialog(parent),
     ui(new Ui::Dialog)
 {
-
-    this->vivo = new QState();
-    this->muerto = new QState();
 
     ui->setupUi(this);
 
@@ -19,7 +17,12 @@ Dialog::Dialog(QWidget *parent):
     connect(this->speedConverter,SIGNAL(velocidadChangedMPH(int)),ui->lcd_mph,SLOT(display(int)));
     connect(this->speedConverter,SIGNAL(velocidadChanged(int)),this,SLOT(actualizaVelocimetro(int)));
 
-    connect(ui->button_HombreVivo,SIGNAL(clicked()),this,SLOT(actualizarHombreMuerto()));
+    //Maquina de estados Botonera Puertas (Derecha)
+    connect(ui->dial,SIGNAL(valueChanged(int)),this,SLOT(MachineBotonesPuertas(int)));
+
+
+    // Configuracion connect de Maquina de Estados Hombre Vivo
+    connect(ui->dial,SIGNAL(valueChanged(int)),this,SLOT(initMaquinaHombreVivo(int)));
 
     //Velocimetro Analogico
     this->velocimetroAnalogico = new QcGaugeWidget;
@@ -48,10 +51,10 @@ Dialog::Dialog(QWidget *parent):
     aguja->setValueRange(0,100);
     velocimetroAnalogico->addBackground(7);
     velocimetroAnalogico->addGlass(60);
+
+    //Agregamos el velocimetro al dashboard
     ui->verticalLayout->addWidget(velocimetroAnalogico);
 
-    int a;
-    a = hombreVivo();
     //qDebug() << "HombreVivo Inicializado" << a;
 
 }
@@ -66,32 +69,76 @@ void Dialog::actualizaVelocimetro(int value)
     aguja->setCurrentValue(value);
 }
 
-int Dialog::hombreVivo(){
-
-    int a = 0;
-
-    vivo->assignProperty(ui->button_HombreVivo,"text","Vivo");
-    vivo->setObjectName("Vivo");
-
-    muerto->assignProperty(ui->button_HombreMuerto,"text","Muerto!!");
-    muerto->setObjectName("muerto");
-
-    muerto->addTransition(ui->button_HombreMuerto, SIGNAL(clicked()), vivo);
-    vivo->addTransition(ui->button_HombreVivo, SIGNAL(clicked()), muerto);
-
-    this->machine.addState(vivo);
-    this->machine.addState(muerto);
-
-    this->machine.setInitialState(vivo);
-    this->machine.start();
-
-    a = 1;
-    return a;
-}
-
 void Dialog::actualizarHombreMuerto(){
 
-    ui->button_HombreMuerto->setText("i'm watching you");
+    this->State_HombreMuerto->assignProperty(ui->button_HombreMuerto,"text","Hombre Muerto");
 
 }
 
+boolean Dialog::MachineBotonesPuertas(int a){
+
+    if (a == 0){
+        this->machineBotoneraDerecha->offBotonera();
+        this->machineBotoneraIzquierda->offBotonera();
+    };
+    if (a == 1){
+        this->machineBotoneraDerecha = new BotoneraPuerta(1,true,ui,this);
+        //Cambiar por machine.isRunning
+    };
+    if (a == 2){
+        this->machineBotoneraIzquierda = new BotoneraPuerta(2,false,ui,this);
+    };
+
+    return(true);
+}
+
+boolean Dialog::initMaquinaHombreVivo(int pos){
+
+    //Inicio la maquina de estados
+    this->State_StartSistemaHombreVivo = new QState();
+    this->State_EndSistemaHombreVivo = new QFinalState();
+    this->State_Hombrevivo = new QState();
+    this->State_HombreMuerto = new QState();
+
+    this->State_StartSistemaHombreVivo->assignProperty(ui->button_HombreVivo,"text","you are ready");
+    this->State_StartSistemaHombreVivo->assignProperty(ui->button_HombreMuerto,"text","I'm  watching you");
+    
+    this->State_StartSistemaHombreVivo->addTransition(ui->dial,SIGNAL(valueChanged(int)),this->State_Hombrevivo);
+    this->State_Hombrevivo->addTransition(ui->button_HombreVivo,SIGNAL(clicked()),this->State_HombreMuerto);
+    this->State_HombreMuerto->addTransition(ui->button_HombreMuerto,SIGNAL(clicked()),this->State_Hombrevivo);
+    //this->State_HombreMuerto->addTransition(TIMER,SIGNAL(),this->State_EndSistemaHombreVivo);
+    
+    this->machineHombreVivo.addState(State_StartSistemaHombreVivo);
+    this->machineHombreVivo.addState(State_EndSistemaHombreVivo);
+    this->machineHombreVivo.addState(State_Hombrevivo);
+    this->machineHombreVivo.addState(State_HombreMuerto);
+    
+//    //QPushButton *button = ...;
+//    //QState *s1 = ...;
+//    //QState *s2 = ...;
+//    // If in s1 and the button receives an Enter event, transition to s2
+//    QEventTransition *enterTransition = new QEventTransition(ui->button_HombreVivo, QEvent::Enter);
+//    //enterTransition->connect()
+//    //enterTransition->setTargetState(this->State_HombreMuerto);
+//    //this->State_HombreMuerto
+//    //enterTransition->connect(ui->button_HombreVivo,SIGNAL(clicked()),this->State_HombreMuerto);
+
+
+//    this->State_Hombrevivo->addTransition(enterTransition);
+//    // If in s2 and the button receives an Exit event, transition back to s1
+//    QEventTransition *leaveTransition = new QEventTransition(ui->button_HombreMuerto, QEvent::Leave);
+//    leaveTransition->setTargetState(this->State_Hombrevivo);
+//    this->State_HombreMuerto->addTransition(leaveTransition);
+//   // this->State_Hombrevivo->addTransition(ui->button_HombreVivo,SIGNAL(clicked()),this->State_HombreMuerto);
+
+
+
+//    this->machineHombreVivo.setInitialState(State_StartSistemaHombreVivo);
+//    this->machineHombreVivo.start();
+
+//    return (this->machineHombreVivo.isRunning() ? true:false);
+    
+}
+
+//
+//class StateButtonSubte : public

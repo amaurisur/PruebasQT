@@ -7,7 +7,8 @@ QT += core gui widgets xml qml
 SOURCES += main.cpp \
     speedconverter.cpp \
     dialog.cpp \
-    source/qcgaugewidget.cpp
+    source/qcgaugewidget.cpp \
+    botonerapuerta.cpp
 
 RESOURCES +=
 
@@ -19,7 +20,8 @@ include(deployment.pri)
 HEADERS += \
     speedconverter.h \
     dialog.h \
-    source/qcgaugewidget.h
+    source/qcgaugewidget.h \
+    botonerapuerta.h
 
 FORMS += dialog.ui
 

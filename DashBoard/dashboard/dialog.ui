@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>660</width>
-    <height>508</height>
+    <width>814</width>
+    <height>510</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QWidget" name="horizontalLayoutWidget_2">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>310</y>
+     <x>20</x>
+     <y>290</y>
      <width>301</width>
      <height>121</height>
     </rect>
@@ -54,8 +54,8 @@
   <widget class="QDial" name="dial">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>330</y>
+     <x>550</x>
+     <y>230</y>
      <width>121</width>
      <height>131</height>
     </rect>
@@ -63,14 +63,26 @@
    <property name="mouseTracking">
     <bool>false</bool>
    </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
    <property name="maximum">
     <number>2</number>
    </property>
    <property name="value">
-    <number>1</number>
+    <number>0</number>
+   </property>
+   <property name="sliderPosition">
+    <number>0</number>
    </property>
    <property name="tracking">
-    <bool>true</bool>
+    <bool>false</bool>
+   </property>
+   <property name="invertedControls">
+    <bool>false</bool>
+   </property>
+   <property name="wrapping">
+    <bool>false</bool>
    </property>
    <property name="notchesVisible">
     <bool>true</bool>
@@ -79,7 +91,7 @@
   <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>380</x>
      <y>10</y>
      <width>341</width>
      <height>101</height>
@@ -97,7 +109,7 @@
   <widget class="QLabel" name="label_kmh">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>470</x>
      <y>120</y>
      <width>47</width>
      <height>13</height>
@@ -110,7 +122,7 @@
   <widget class="QLabel" name="label_mph">
    <property name="geometry">
     <rect>
-     <x>560</x>
+     <x>640</x>
      <y>120</y>
      <width>47</width>
      <height>13</height>
@@ -123,10 +135,10 @@
   <widget class="QSlider" name="palanca">
    <property name="geometry">
     <rect>
-     <x>500</x>
-     <y>170</y>
-     <width>141</width>
-     <height>321</height>
+     <x>400</x>
+     <y>220</y>
+     <width>101</width>
+     <height>281</height>
     </rect>
    </property>
    <property name="palette">
@@ -493,13 +505,79 @@ background-color: qlineargradient(spread:pad, x1:0.0168539, y1:0, x2:0, y2:1, st
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>90</x>
      <y>10</y>
      <width>281</width>
      <height>231</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout"/>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>77</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="layout_BotonesPuertaIzq">
+    <item>
+     <widget class="QPushButton" name="button_izq_azul">
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="button_izq_rojo">
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="button_izq_verde">
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_4">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>10</y>
+     <width>77</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="layout_botonesPuertaDer">
+    <item>
+     <widget class="QPushButton" name="botton_der_azul">
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="botton_der_rojo">
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="boton_der_verde">
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
