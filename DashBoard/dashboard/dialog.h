@@ -3,9 +3,11 @@
 
 #include <QDialog>
 #include <QtWidgets>
+#include <QtMultimedia>
 #include "speedconverter.h"
 #include "./source/qcgaugewidget.h"
 #include "botonerapuerta.h"
+#include "formaceite.h"
 
 namespace Ui{
     class Dialog;
@@ -31,6 +33,7 @@ private slots:
 private:
     //LayOut principal
     Ui::Dialog *ui;
+
     //Convertidor de velocidad.
     SpeedConverter *speedConverter;
 
@@ -45,8 +48,14 @@ private:
     QFinalState *State_EndSistemaHombreVivo;
 
     //Maquina de Estados Botonera (derecha)
-    BotoneraPuerta *machineBotoneraDerecha;
-    BotoneraPuerta *machineBotoneraIzquierda;
+    BotoneraPuerta *machineBotoneraDerecha = NULL;
+    BotoneraPuerta *machineBotoneraIzquierda = NULL;
+
+    //Bocina Tren
+    QMediaPlayer *bocina = NULL;
+
+    //Velocimetro con fondo png
+    FormAceite *VelocimetroConFondo = NULL;
 };
 
 #endif // DASHBOARD_H

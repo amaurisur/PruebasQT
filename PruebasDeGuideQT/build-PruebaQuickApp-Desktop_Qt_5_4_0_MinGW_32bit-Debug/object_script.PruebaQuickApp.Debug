@@ -1,0 +1,17 @@
+INPUT(
+./debug\main.o
+./debug\widgetwithbackground.o
+./debug\abstractmeter.o
+./debug\functions.o
+./debug\manometer.o
+./debug\test.o
+./debug\counter.o
+./debug\widgettester.o
+./debug\qrc_qml.o
+./debug\moc_manometer.o
+./debug\moc_abstractmeter.o
+./debug\moc_widgetwithbackground.o
+./debug\moc_test.o
+./debug\moc_counter.o
+./debug\moc_widgettester.o
+);

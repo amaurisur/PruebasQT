@@ -1,0 +1,17 @@
+INPUT(
+./debug\main.o
+./debug\speedconverter.o
+./debug\dialog.o
+./debug\qcgaugewidget.o
+./debug\botonerapuerta.o
+./debug\botonerahombrevivo.o
+./debug\formaceite.o
+./debug\lcd_tunning.o
+./debug\qrc_recursossubte.o
+./debug\moc_speedconverter.o
+./debug\moc_dialog.o
+./debug\moc_qcgaugewidget.o
+./debug\moc_botonerapuerta.o
+./debug\moc_botonerahombrevivo.o
+./debug\moc_formaceite.o
+);

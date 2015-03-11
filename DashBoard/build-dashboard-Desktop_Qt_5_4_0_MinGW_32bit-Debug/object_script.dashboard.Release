@@ -1,0 +1,17 @@
+INPUT(
+./release\main.o
+./release\speedconverter.o
+./release\dialog.o
+./release\qcgaugewidget.o
+./release\botonerapuerta.o
+./release\botonerahombrevivo.o
+./release\formaceite.o
+./release\lcd_tunning.o
+./release\qrc_recursossubte.o
+./release\moc_speedconverter.o
+./release\moc_dialog.o
+./release\moc_qcgaugewidget.o
+./release\moc_botonerapuerta.o
+./release\moc_botonerahombrevivo.o
+./release\moc_formaceite.o
+);

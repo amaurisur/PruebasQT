@@ -1,0 +1,3 @@
+Main estaria, falta explicar cada componente.
+abstractmeter:
+

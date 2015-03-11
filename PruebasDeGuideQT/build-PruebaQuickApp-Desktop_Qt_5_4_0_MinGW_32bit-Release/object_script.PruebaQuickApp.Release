@@ -1,0 +1,17 @@
+INPUT(
+./release\main.o
+./release\widgetwithbackground.o
+./release\abstractmeter.o
+./release\functions.o
+./release\manometer.o
+./release\test.o
+./release\counter.o
+./release\widgettester.o
+./release\qrc_test.o
+./release\moc_manometer.o
+./release\moc_abstractmeter.o
+./release\moc_widgetwithbackground.o
+./release\moc_test.o
+./release\moc_counter.o
+./release\moc_widgettester.o
+);

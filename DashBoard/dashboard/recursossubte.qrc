@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Botones/blue.PNG</file>
+        <file>Botones/blueON.png</file>
+        <file>Botones/ButtonQML.qml</file>
+        <file>Botones/green.PNG</file>
+        <file>Botones/greenON.png</file>
+        <file>Botones/red.PNG</file>
+        <file>Botones/redON.png</file>
+        <file>Botones/tunningButton.qml</file>
+        <file>MedidorAceite.qml</file>
+        <file>images/agujaAceite.svg</file>
+        <file>images/pruebaAceite.svg</file>
+    </qresource>
+</RCC>

@@ -6,6 +6,8 @@ BotoneraPuerta::BotoneraPuerta(int estado, QVariant der, Ui::Dialog *ui, QObject
     this->ui = ui;
     parent = parent;
     this->m_estado = estado;
+
+    //Maquina de estados para rojo verde de puertas laterales
     this->machine_puertas = new QStateMachine();
     this->state_abierta = new QState();
     this->state_cerrada = new QState();
@@ -13,6 +15,7 @@ BotoneraPuerta::BotoneraPuerta(int estado, QVariant der, Ui::Dialog *ui, QObject
     this->machine_puertas->addState(this->state_abierta);
     this->machine_puertas->addState(this->state_cerrada);
 
+    //Discrimina si es derecha o izquierda
     if (der.toBool()){
             this->state_abierta->assignProperty(ui->boton_der_verde,"text","ABIERTA");
             this->state_abierta->assignProperty(ui->botton_der_rojo,"text","<-----");
@@ -38,21 +41,21 @@ BotoneraPuerta::BotoneraPuerta(int estado, QVariant der, Ui::Dialog *ui, QObject
         this->machine_puertas->setInitialState(this->state_cerrada);
     }
 
-//    QString *mensaje = new QString("APAGADO");
-//    connect(machine_puertas,SIGNAL(stopped()),ui->boton_der_verde,SLOT());
-
     this->machine_puertas->start();
 
 }
 
-
-BotoneraPuerta::~BotoneraPuerta()
-{
-
-}
 
 void BotoneraPuerta::offBotonera(){
 
     this->machine_puertas->stop();
 }
 
+void BotoneraPuerta::onBotonera(){
+    this->machine_puertas->start();
+}
+
+BotoneraPuerta::~BotoneraPuerta()
+{
+
+}

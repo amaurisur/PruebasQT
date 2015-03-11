@@ -22,6 +22,7 @@ public:
     ~SpeedConverter();
     int getVelocidadMPH() const;
     int getVelocidadKMH() const;
+    double getVelocidadDouble() const;
 
 signals:
     /**
@@ -30,6 +31,7 @@ signals:
      */
     void velocidadChanged(int);
     void velocidadChangedMPH(int);
+    void velocidadChangedDouble(double);
 
 public slots:
     /**

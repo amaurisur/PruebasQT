@@ -1,6 +1,8 @@
 #include "dialog.h"
 #include "ui_dialog.h"
 #include "botonerapuerta.h"
+//#include "formaceite.h"
+
 
 Dialog::Dialog(QWidget *parent):
     QDialog(parent),
@@ -12,10 +14,14 @@ Dialog::Dialog(QWidget *parent):
     //Velocidad de inicializacion a 0
     this->speedConverter = new SpeedConverter(0,this);
 
+    //Conexiones UI
     connect(ui->palanca,SIGNAL(valueChanged(int)), this->speedConverter,SLOT(setVelocidad(int)));
     connect(this->speedConverter,SIGNAL(velocidadChanged(int)),ui->lcd_kmh,SLOT(display(int)));
     connect(this->speedConverter,SIGNAL(velocidadChangedMPH(int)),ui->lcd_mph,SLOT(display(int)));
     connect(this->speedConverter,SIGNAL(velocidadChanged(int)),this,SLOT(actualizaVelocimetro(int)));
+
+    // Madidor de Aceite
+    connect(this->speedConverter,SIGNAL(velocidadChangedDouble(double)),ui->aceiteMedidor,SLOT(setVelocidad(double)));
 
     //Maquina de estados Botonera Puertas (Derecha)
     connect(ui->dial,SIGNAL(valueChanged(int)),this,SLOT(MachineBotonesPuertas(int)));
@@ -57,6 +63,13 @@ Dialog::Dialog(QWidget *parent):
 
     //qDebug() << "HombreVivo Inicializado" << a;
 
+    //Bocina Tren
+//    this->bocina = new QMediaPlayer;
+
+//    bocina->setMedia(QUrl::fromLocalFile("/Users/me/Music/coolsong.mp3"));
+//    player->setVolume(50);
+//    player->play();
+
 }
 
 Dialog::~Dialog()
@@ -69,25 +82,31 @@ void Dialog::actualizaVelocimetro(int value)
     aguja->setCurrentValue(value);
 }
 
-void Dialog::actualizarHombreMuerto(){
-
-    this->State_HombreMuerto->assignProperty(ui->button_HombreMuerto,"text","Hombre Muerto");
-
-}
-
 boolean Dialog::MachineBotonesPuertas(int a){
 
-    if (a == 0){
+    switch ( a ) {
+    case 0:
         this->machineBotoneraDerecha->offBotonera();
         this->machineBotoneraIzquierda->offBotonera();
-    };
-    if (a == 1){
-        this->machineBotoneraDerecha = new BotoneraPuerta(1,true,ui,this);
-        //Cambiar por machine.isRunning
-    };
-    if (a == 2){
-        this->machineBotoneraIzquierda = new BotoneraPuerta(2,false,ui,this);
-    };
+      break;
+    case 1:
+        if (this->machineBotoneraDerecha == NULL){
+            this->machineBotoneraDerecha = new BotoneraPuerta(1,true,ui,this);
+        }else{
+            this->machineBotoneraDerecha->onBotonera();
+        }
+      break;
+    case 2:
+        if (this->machineBotoneraIzquierda == NULL){
+            this->machineBotoneraIzquierda = new BotoneraPuerta(2,false,ui,this);
+        }else{
+            this->machineBotoneraIzquierda->onBotonera();
+        };
+        break;
+    default:
+      // Code
+      break;
+    }
 
     return(true);
 }
@@ -132,13 +151,14 @@ boolean Dialog::initMaquinaHombreVivo(int pos){
 //   // this->State_Hombrevivo->addTransition(ui->button_HombreVivo,SIGNAL(clicked()),this->State_HombreMuerto);
 
 
-
-//    this->machineHombreVivo.setInitialState(State_StartSistemaHombreVivo);
-//    this->machineHombreVivo.start();
+    this->machineHombreVivo.setInitialState(State_StartSistemaHombreVivo);
+    this->machineHombreVivo.start();
 
 //    return (this->machineHombreVivo.isRunning() ? true:false);
     
 }
 
-//
-//class StateButtonSubte : public
+void Dialog::actualizarHombreMuerto(){
+
+    this->State_HombreMuerto->assignProperty(ui->button_HombreMuerto,"text","Hombre Muerto");
+}

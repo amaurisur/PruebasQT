@@ -12,7 +12,7 @@
 //class Dialog;
 //}
 
-class BotoneraPuerta : QObject
+class BotoneraPuerta : public QObject
 {
     Q_OBJECT
 public:
@@ -25,6 +25,7 @@ public:
 
 public slots:
     void offBotonera();
+    void onBotonera();
 private:
     /**
      * @brief m_estado
