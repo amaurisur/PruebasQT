@@ -11,7 +11,8 @@ SOURCES += main.cpp \
     botonerapuerta.cpp \
     botonerahombrevivo.cpp \
     formaceite.cpp \
-    lcd_tunning.cpp
+    lcd_tunning.cpp \
+    form_botonera_hombremuerto.cpp
 
 RESOURCES += \
     recursossubte.qrc
@@ -28,14 +29,17 @@ HEADERS += \
     botonerapuerta.h \
     botonerahombrevivo.h \
     formaceite.h \
-    lcd_tunning.h
+    lcd_tunning.h \
+    form_botonera_hombremuerto.h
 
 FORMS += dialog.ui \
     botonerahombrevivo.ui \
-    formaceite.ui
+    formaceite.ui \
+    form_botonera_hombremuerto.ui
 
 DISTFILES += \
     MedidorAceite.qml \
-    MedidorAceite.qml
+    MedidorAceite.qml \
+    BotoneraHombreMuerto.qml
 
 RESOURCES +=

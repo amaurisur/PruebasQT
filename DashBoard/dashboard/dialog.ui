@@ -613,13 +613,13 @@ background-color: qlineargradient(spread:pad, x1:0.0168539, y1:0, x2:0, y2:1, st
     <string>Km/h</string>
    </property>
   </widget>
-  <widget class="botoneraHombreVivo" name="widget" native="true">
+  <widget class="Form_botonera_hombreMuerto" name="widget" native="true">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>460</y>
-     <width>361</width>
-     <height>191</height>
+     <width>100</width>
+     <height>150</height>
     </rect>
    </property>
   </widget>
@@ -636,15 +636,15 @@ background-color: qlineargradient(spread:pad, x1:0.0168539, y1:0, x2:0, y2:1, st
  </widget>
  <customwidgets>
   <customwidget>
-   <class>botoneraHombreVivo</class>
-   <extends>QWidget</extends>
-   <header location="global">botonerahombrevivo.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>FormAceite</class>
    <extends>QWidget</extends>
    <header location="global">formaceite.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Form_botonera_hombreMuerto</class>
+   <extends>QWidget</extends>
+   <header location="global">form_botonera_hombremuerto.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

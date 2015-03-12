@@ -23,7 +23,7 @@
 #include <QtWidgets/QSlider>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
-#include <botonerahombrevivo.h>
+#include <form_botonera_hombremuerto.h>
 #include <formaceite.h>
 
 QT_BEGIN_NAMESPACE
@@ -55,7 +55,7 @@ public:
     QPushButton *botton_der_rojo;
     QPushButton *boton_der_verde;
     QLabel *label_kmh;
-    botoneraHombreVivo *widget;
+    Form_botonera_hombreMuerto *widget;
     FormAceite *aceiteMedidor;
 
     void setupUi(QDialog *Dialog)
@@ -285,9 +285,9 @@ public:
         label_kmh = new QLabel(Dialog);
         label_kmh->setObjectName(QStringLiteral("label_kmh"));
         label_kmh->setGeometry(QRect(60, 340, 31, 21));
-        widget = new botoneraHombreVivo(Dialog);
+        widget = new Form_botonera_hombreMuerto(Dialog);
         widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(10, 460, 361, 191));
+        widget->setGeometry(QRect(10, 460, 100, 150));
         aceiteMedidor = new FormAceite(Dialog);
         aceiteMedidor->setObjectName(QStringLiteral("aceiteMedidor"));
         aceiteMedidor->setGeometry(QRect(360, 670, 150, 100));

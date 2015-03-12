@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/">
-        <file>Botones/blue.PNG</file>
+        <file>Botones/blue.png</file>
         <file>Botones/blueON.png</file>
         <file>Botones/ButtonQML.qml</file>
         <file>Botones/green.PNG</file>
@@ -11,5 +11,12 @@
         <file>MedidorAceite.qml</file>
         <file>images/agujaAceite.svg</file>
         <file>images/pruebaAceite.svg</file>
+        <file>BotoneraHombreMuerto.qml</file>
+        <file>images/BKG_botonera_HM.png</file>
+        <file>images/blue.PNG</file>
+        <file>images/blueON.png</file>
+        <file>images/red.PNG</file>
+        <file>images/redON.png</file>
+        <file>images/velocimetro.png</file>
     </qresource>
 </RCC>
