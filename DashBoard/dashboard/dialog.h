@@ -40,6 +40,7 @@ private:
     //Velocimetro analogico
     QcGaugeWidget *velocimetroAnalogico;
     QcNeedleItem *aguja;
+
     //Maquina de estados Hombre Muerto-Vivo
     QStateMachine machineHombreVivo;
     QState *State_Hombrevivo;

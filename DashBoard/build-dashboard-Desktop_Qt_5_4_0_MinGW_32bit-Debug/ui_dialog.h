@@ -33,8 +33,8 @@ class Ui_Dialog
 public:
     QWidget *horizontalLayoutWidget_2;
     QHBoxLayout *horizontalLayout_2;
-    QPushButton *button_HombreVivo;
     QPushButton *button_HombreMuerto;
+    QPushButton *button_HombreVivo;
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
     QLCDNumber *lcd_kmh;
@@ -62,18 +62,13 @@ public:
     {
         if (Dialog->objectName().isEmpty())
             Dialog->setObjectName(QStringLiteral("Dialog"));
-        Dialog->resize(518, 787);
+        Dialog->resize(516, 606);
         horizontalLayoutWidget_2 = new QWidget(Dialog);
         horizontalLayoutWidget_2->setObjectName(QStringLiteral("horizontalLayoutWidget_2"));
-        horizontalLayoutWidget_2->setGeometry(QRect(0, 380, 321, 71));
+        horizontalLayoutWidget_2->setGeometry(QRect(10, 380, 158, 61));
         horizontalLayout_2 = new QHBoxLayout(horizontalLayoutWidget_2);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        button_HombreVivo = new QPushButton(horizontalLayoutWidget_2);
-        button_HombreVivo->setObjectName(QStringLiteral("button_HombreVivo"));
-
-        horizontalLayout_2->addWidget(button_HombreVivo);
-
         button_HombreMuerto = new QPushButton(horizontalLayoutWidget_2);
         button_HombreMuerto->setObjectName(QStringLiteral("button_HombreMuerto"));
         button_HombreMuerto->setAutoFillBackground(false);
@@ -82,6 +77,11 @@ public:
         button_HombreMuerto->setFlat(false);
 
         horizontalLayout_2->addWidget(button_HombreMuerto);
+
+        button_HombreVivo = new QPushButton(horizontalLayoutWidget_2);
+        button_HombreVivo->setObjectName(QStringLiteral("button_HombreVivo"));
+
+        horizontalLayout_2->addWidget(button_HombreVivo);
 
         horizontalLayoutWidget = new QWidget(Dialog);
         horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
@@ -99,7 +99,7 @@ public:
         dial->setObjectName(QStringLiteral("dial"));
         dial->setMouseTracking(false);
         dial->setAutoFillBackground(true);
-        dial->setMaximum(2);
+        dial->setMaximum(3);
         dial->setValue(0);
         dial->setSliderPosition(0);
         dial->setTracking(false);
@@ -287,10 +287,10 @@ public:
         label_kmh->setGeometry(QRect(60, 340, 31, 21));
         widget = new Form_botonera_hombreMuerto(Dialog);
         widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(10, 460, 100, 150));
+        widget->setGeometry(QRect(260, 390, 100, 150));
         aceiteMedidor = new FormAceite(Dialog);
         aceiteMedidor->setObjectName(QStringLiteral("aceiteMedidor"));
-        aceiteMedidor->setGeometry(QRect(360, 670, 150, 100));
+        aceiteMedidor->setGeometry(QRect(10, 460, 150, 100));
 
         retranslateUi(Dialog);
 
@@ -300,8 +300,8 @@ public:
     void retranslateUi(QDialog *Dialog)
     {
         Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", 0));
-        button_HombreVivo->setText(QApplication::translate("Dialog", "PushButton", 0));
         button_HombreMuerto->setText(QApplication::translate("Dialog", "PushButton", 0));
+        button_HombreVivo->setText(QApplication::translate("Dialog", "PushButton", 0));
         label_mph->setText(QApplication::translate("Dialog", "M/h", 0));
         button_izq_azul->setText(QApplication::translate("Dialog", "PushButton", 0));
         button_izq_rojo->setText(QApplication::translate("Dialog", "PushButton", 0));

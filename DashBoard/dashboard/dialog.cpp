@@ -2,6 +2,7 @@
 #include "ui_dialog.h"
 #include "botonerapuerta.h"
 //#include "formaceite.h"
+#include "form_botonera_hombremuerto.h"
 
 
 Dialog::Dialog(QWidget *parent):
@@ -26,9 +27,9 @@ Dialog::Dialog(QWidget *parent):
     //Maquina de estados Botonera Puertas (Derecha)
     connect(ui->dial,SIGNAL(valueChanged(int)),this,SLOT(MachineBotonesPuertas(int)));
 
-
     // Configuracion connect de Maquina de Estados Hombre Vivo
-    connect(ui->dial,SIGNAL(valueChanged(int)),this,SLOT(initMaquinaHombreVivo(int)));
+    connect(ui->button_HombreMuerto,SIGNAL(clicked()),this->ui->widget,SLOT(on_SistemaHombreMuerto()));
+    connect(ui->button_HombreVivo,SIGNAL(clicked()),this->ui->widget,SLOT(off_SistemaHombreMuerto()));
 
     //Velocimetro Analogico
     this->velocimetroAnalogico = new QcGaugeWidget;
@@ -103,6 +104,13 @@ boolean Dialog::MachineBotonesPuertas(int a){
             this->machineBotoneraIzquierda->onBotonera();
         };
         break;
+    case 3:
+        if (this->ui->widget == NULL){
+            this->ui->widget = new Form_botonera_hombreMuerto(this);
+        }else{
+            this->ui->widget->on_SistemaHombreMuerto();
+        };
+        break;
     default:
       // Code
       break;
@@ -114,23 +122,23 @@ boolean Dialog::MachineBotonesPuertas(int a){
 boolean Dialog::initMaquinaHombreVivo(int pos){
 
     //Inicio la maquina de estados
-    this->State_StartSistemaHombreVivo = new QState();
-    this->State_EndSistemaHombreVivo = new QFinalState();
-    this->State_Hombrevivo = new QState();
-    this->State_HombreMuerto = new QState();
+//    this->State_StartSistemaHombreVivo = new QState();
+//    this->State_EndSistemaHombreVivo = new QFinalState();
+//    this->State_Hombrevivo = new QState();
+//    this->State_HombreMuerto = new QState();
 
-    this->State_StartSistemaHombreVivo->assignProperty(ui->button_HombreVivo,"text","you are ready");
-    this->State_StartSistemaHombreVivo->assignProperty(ui->button_HombreMuerto,"text","I'm  watching you");
+//    this->State_StartSistemaHombreVivo->assignProperty(ui->button_HombreVivo,"text","you are ready");
+//    this->State_StartSistemaHombreVivo->assignProperty(ui->button_HombreMuerto,"text","I'm  watching you");
     
-    this->State_StartSistemaHombreVivo->addTransition(ui->dial,SIGNAL(valueChanged(int)),this->State_Hombrevivo);
-    this->State_Hombrevivo->addTransition(ui->button_HombreVivo,SIGNAL(clicked()),this->State_HombreMuerto);
-    this->State_HombreMuerto->addTransition(ui->button_HombreMuerto,SIGNAL(clicked()),this->State_Hombrevivo);
-    //this->State_HombreMuerto->addTransition(TIMER,SIGNAL(),this->State_EndSistemaHombreVivo);
+//    this->State_StartSistemaHombreVivo->addTransition(ui->dial,SIGNAL(valueChanged(int)),this->State_Hombrevivo);
+//    this->State_Hombrevivo->addTransition(ui->button_HombreVivo,SIGNAL(clicked()),this->State_HombreMuerto);
+//    this->State_HombreMuerto->addTransition(ui->button_HombreMuerto,SIGNAL(clicked()),this->State_Hombrevivo);
+//    //this->State_HombreMuerto->addTransition(TIMER,SIGNAL(),this->State_EndSistemaHombreVivo);
     
-    this->machineHombreVivo.addState(State_StartSistemaHombreVivo);
-    this->machineHombreVivo.addState(State_EndSistemaHombreVivo);
-    this->machineHombreVivo.addState(State_Hombrevivo);
-    this->machineHombreVivo.addState(State_HombreMuerto);
+//    this->machineHombreVivo.addState(State_StartSistemaHombreVivo);
+//    this->machineHombreVivo.addState(State_EndSistemaHombreVivo);
+//    this->machineHombreVivo.addState(State_Hombrevivo);
+//    this->machineHombreVivo.addState(State_HombreMuerto);
     
 //    //QPushButton *button = ...;
 //    //QState *s1 = ...;
@@ -151,8 +159,8 @@ boolean Dialog::initMaquinaHombreVivo(int pos){
 //   // this->State_Hombrevivo->addTransition(ui->button_HombreVivo,SIGNAL(clicked()),this->State_HombreMuerto);
 
 
-    this->machineHombreVivo.setInitialState(State_StartSistemaHombreVivo);
-    this->machineHombreVivo.start();
+//    this->machineHombreVivo.setInitialState(State_StartSistemaHombreVivo);
+//    this->machineHombreVivo.start();
 
 //    return (this->machineHombreVivo.isRunning() ? true:false);
     

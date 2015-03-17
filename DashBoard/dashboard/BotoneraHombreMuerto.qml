@@ -3,14 +3,39 @@ import QtQuick 2.0
 Rectangle {
     width: 100
     height: 150
-
     id: botoneraHM
+    objectName: "botoneraHM"
 
     signal blueClicked()
     signal redClicked()
 
+    function light_redButton(accion){
+        if (accion == "ON"){
+            red.state = "stateRedOn"
+            console.log("Entro en RED  light --> accion == ON ",accion)
+        }
+        else{
+            red.state = "stateRedOff"
+            console.log("Entro en RED light --> ELSE de accion == ON ",accion)
+        }
+        return (red.state + accion)
+    }
+
+    function light_blueButton(accion){
+        if (accion == "ON"){
+            blue.state = "stateBlueOn"
+            console.log("Entro en BLUE light --> accion == ON ",accion)
+        }
+        else{
+            blue.state = "stateBlueOff"
+            console.log("Entro en BLUE light --> ELSE de accion == ON ",accion)
+        }
+        return (blue.state + accion)
+    }
+
     Image {
         id: image1
+        objectName: "image1"
         anchors.fill: parent
         source: "images/BKG_botonera_HM.png"
 
@@ -20,6 +45,7 @@ Rectangle {
             anchors.fill: parent
             Item {
                     id: red
+                    objectName: "red"
                     y: 0
                     width: 100
                     height: 75
@@ -51,6 +77,7 @@ Rectangle {
                     states: [
                                 State {
                                     name: "stateRedOn";
+
                                     PropertyChanges { target: redON;
                                                       opacity: 1
                                     }
@@ -73,16 +100,17 @@ Rectangle {
                             }
                     ]
 
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                                    if (red.state == "stateRedOn")
-                                        red.state = "stateRedOff"
-                                    else
-                                        red.state = "stateRedOn"
-                                        botoneraHM.blueClicked()
-                        }
-                    }
+//                    MouseArea {
+//                        anchors.fill: parent
+//                        onClicked: {
+//                                    if (red.state == "stateRedOn")
+//                                        red.state = "stateRedOff"
+//                                        botoneraHM.blueClicked()
+//                                    //else
+//                                       // red.state = "stateRedOn"
+//                                       // botoneraHM.blueClicked()
+//                        }
+//                    }
             }
 
             Item {
@@ -144,16 +172,28 @@ Rectangle {
                 ]
 
                 MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                                    if (blue.state == "stateBlueOn")
-                                        blue.state = "stateBlueOff"
-                                    else
-                                        blue.state = "stateBlueOn"
-                                        botoneraHM.blueClicked()
-                        }
-                }
-           }
+                    anchors.fill: parent
+                    onClicked: {
+                                botoneraHM.blueClicked()
+//                                if (red.state == "stateRedOn"){
+//                                    red.state = "stateRedOff"
+//                                    blue.state = "stateBlueOff"
+//                                    botoneraHM.blueClicked()
+//                                }
+
+                    }
+                } // Mouse Area
+//                MouseArea {
+//                        anchors.fill: parent
+//                        onClicked: {
+//                                    if (blue.state == "stateBlueOn")
+//                                        blue.state = "stateBlueOff"
+//                                    else
+//                                        blue.state = "stateBlueOn"
+//                                        botoneraHM.blueClicked()
+//                        }
+//                }
+           } // Item
        }
     }
 }

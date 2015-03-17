@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>518</width>
-    <height>787</height>
+    <width>516</width>
+    <height>606</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,20 +16,13 @@
   <widget class="QWidget" name="horizontalLayoutWidget_2">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>10</x>
      <y>380</y>
-     <width>321</width>
-     <height>71</height>
+     <width>158</width>
+     <height>61</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_2">
-    <item>
-     <widget class="QPushButton" name="button_HombreVivo">
-      <property name="text">
-       <string>PushButton</string>
-      </property>
-     </widget>
-    </item>
     <item>
      <widget class="QPushButton" name="button_HombreMuerto">
       <property name="autoFillBackground">
@@ -46,6 +39,13 @@
       </property>
       <property name="flat">
        <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="button_HombreVivo">
+      <property name="text">
+       <string>PushButton</string>
       </property>
      </widget>
     </item>
@@ -77,7 +77,7 @@
        <bool>true</bool>
       </property>
       <property name="maximum">
-       <number>2</number>
+       <number>3</number>
       </property>
       <property name="value">
        <number>0</number>
@@ -616,8 +616,8 @@ background-color: qlineargradient(spread:pad, x1:0.0168539, y1:0, x2:0, y2:1, st
   <widget class="Form_botonera_hombreMuerto" name="widget" native="true">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>460</y>
+     <x>260</x>
+     <y>390</y>
      <width>100</width>
      <height>150</height>
     </rect>
@@ -626,8 +626,8 @@ background-color: qlineargradient(spread:pad, x1:0.0168539, y1:0, x2:0, y2:1, st
   <widget class="FormAceite" name="aceiteMedidor" native="true">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>670</y>
+     <x>10</x>
+     <y>460</y>
      <width>150</width>
      <height>100</height>
     </rect>

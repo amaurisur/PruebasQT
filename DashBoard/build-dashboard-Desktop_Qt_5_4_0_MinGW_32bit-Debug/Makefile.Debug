@@ -821,10 +821,9 @@ debug/moc_dialog.cpp: C:/Qt/5.4/mingw491_32/include/QtWidgets/QDialog \
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/QSlider \
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/QVBoxLayout \
 		../dashboard/form_botonera_hombremuerto.h \
-		../dashboard/formaceite.h \
-		C:/Qt/5.4/mingw491_32/include/QtQuick/QQuickView \
-		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickview.h \
-		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickwindow.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QFinalState \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/QQuickItem \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickitem.h \
 		C:/Qt/5.4/mingw491_32/include/QtQuick/qtquickglobal.h \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqml.h \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlprivate.h \
@@ -832,6 +831,14 @@ debug/moc_dialog.cpp: C:/Qt/5.4/mingw491_32/include/QtWidgets/QDialog \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlparserstatus.h \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlpropertyvaluesource.h \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqmllist.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlcomponent.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlerror.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qjsvalue.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QTimer \
+		../dashboard/formaceite.h \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/QQuickView \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickview.h \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickwindow.h \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqmldebug.h \
 		../dashboard/dialog.h
 	C:\Qt\5.4\mingw491_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.4/mingw491_32/mkspecs/win32-g++ -IC:/Desk/Visualizacion/PruebasQT/DashBoard/dashboard -IC:/Qt/5.4/mingw491_32/include -IC:/Qt/5.4/mingw491_32/include/QtQuickWidgets -IC:/Qt/5.4/mingw491_32/include/QtWidgets -IC:/Qt/5.4/mingw491_32/include/QtMultimedia -IC:/Qt/5.4/mingw491_32/include/QtQuick -IC:/Qt/5.4/mingw491_32/include/QtGui -IC:/Qt/5.4/mingw491_32/include/QtXml -IC:/Qt/5.4/mingw491_32/include/QtQml -IC:/Qt/5.4/mingw491_32/include/QtNetwork -IC:/Qt/5.4/mingw491_32/include/QtCore -I. ..\dashboard\dialog.h -o debug\moc_dialog.cpp
@@ -1109,11 +1116,30 @@ debug/moc_botonerapuerta.cpp: C:/Qt/5.4/mingw491_32/include/QtCore/QObject \
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/QVBoxLayout \
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/QWidget \
 		../dashboard/form_botonera_hombremuerto.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QFinalState \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qfinalstate.h \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/QQuickItem \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickitem.h \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qtquickglobal.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqml.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlprivate.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qtqmlglobal.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlparserstatus.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlpropertyvaluesource.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmllist.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qmetaobject.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlcomponent.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlerror.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qjsvalue.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QList \
+		C:/Qt/5.4/mingw491_32/include/QtGui/qaccessible.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QTimer \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qtimer.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qbasictimer.h \
 		../dashboard/formaceite.h \
 		C:/Qt/5.4/mingw491_32/include/QtQuick/QQuickView \
 		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickview.h \
 		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickwindow.h \
-		C:/Qt/5.4/mingw491_32/include/QtQuick/qtquickglobal.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qopengl.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qt_windows.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qopengles2ext.h \
@@ -1124,13 +1150,6 @@ debug/moc_botonerapuerta.cpp: C:/Qt/5.4/mingw491_32/include/QtCore/QObject \
 		C:/Qt/5.4/mingw491_32/include/QtCore/QRect \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qsurface.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qsurfaceformat.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qqml.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlprivate.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qtqmlglobal.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlparserstatus.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlpropertyvaluesource.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qqmllist.h \
-		C:/Qt/5.4/mingw491_32/include/QtCore/qmetaobject.h \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqmldebug.h \
 		../dashboard/botonerapuerta.h
 	C:\Qt\5.4\mingw491_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.4/mingw491_32/mkspecs/win32-g++ -IC:/Desk/Visualizacion/PruebasQT/DashBoard/dashboard -IC:/Qt/5.4/mingw491_32/include -IC:/Qt/5.4/mingw491_32/include/QtQuickWidgets -IC:/Qt/5.4/mingw491_32/include/QtWidgets -IC:/Qt/5.4/mingw491_32/include/QtMultimedia -IC:/Qt/5.4/mingw491_32/include/QtQuick -IC:/Qt/5.4/mingw491_32/include/QtGui -IC:/Qt/5.4/mingw491_32/include/QtXml -IC:/Qt/5.4/mingw491_32/include/QtQml -IC:/Qt/5.4/mingw491_32/include/QtNetwork -IC:/Qt/5.4/mingw491_32/include/QtCore -I. ..\dashboard\botonerapuerta.h -o debug\moc_botonerapuerta.cpp
@@ -1471,6 +1490,34 @@ debug/moc_form_botonera_hombremuerto.cpp: C:/Qt/5.4/mingw491_32/include/QtWidget
 		C:/Qt/5.4/mingw491_32/include/QtCore/qfiledevice.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QState \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qstate.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qabstractstate.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QFinalState \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qfinalstate.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QStateMachine \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qstatemachine.h \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/QQuickItem \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickitem.h \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qtquickglobal.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqml.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlprivate.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qtqmlglobal.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlparserstatus.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlpropertyvaluesource.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmllist.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qmetaobject.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlcomponent.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlerror.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qjsvalue.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QObject \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QList \
+		C:/Qt/5.4/mingw491_32/include/QtGui/qaccessible.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qeventloop.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QTimer \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qtimer.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qbasictimer.h \
 		../dashboard/form_botonera_hombremuerto.h
 	C:\Qt\5.4\mingw491_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.4/mingw491_32/mkspecs/win32-g++ -IC:/Desk/Visualizacion/PruebasQT/DashBoard/dashboard -IC:/Qt/5.4/mingw491_32/include -IC:/Qt/5.4/mingw491_32/include/QtQuickWidgets -IC:/Qt/5.4/mingw491_32/include/QtWidgets -IC:/Qt/5.4/mingw491_32/include/QtMultimedia -IC:/Qt/5.4/mingw491_32/include/QtQuick -IC:/Qt/5.4/mingw491_32/include/QtGui -IC:/Qt/5.4/mingw491_32/include/QtXml -IC:/Qt/5.4/mingw491_32/include/QtQml -IC:/Qt/5.4/mingw491_32/include/QtNetwork -IC:/Qt/5.4/mingw491_32/include/QtCore -I. ..\dashboard\form_botonera_hombremuerto.h -o debug\moc_form_botonera_hombremuerto.cpp
 
@@ -1709,7 +1756,35 @@ ui_dialog.h: ../dashboard/dialog.ui \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qfile.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qfiledevice.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qvector2d.h \
-		C:/Qt/5.4/mingw491_32/include/QtGui/qtouchdevice.h
+		C:/Qt/5.4/mingw491_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QState \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qstate.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qabstractstate.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QFinalState \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qfinalstate.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QStateMachine \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qstatemachine.h \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/QQuickItem \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickitem.h \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qtquickglobal.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqml.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlprivate.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qtqmlglobal.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlparserstatus.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlpropertyvaluesource.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmllist.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qmetaobject.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlcomponent.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlerror.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qjsvalue.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QObject \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QList \
+		C:/Qt/5.4/mingw491_32/include/QtGui/qaccessible.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qeventloop.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QTimer \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qtimer.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qbasictimer.h
 	C:\Qt\5.4\mingw491_32\bin\uic.exe ..\dashboard\dialog.ui -o ui_dialog.h
 
 ui_botonerahombrevivo.h: ../dashboard/botonerahombrevivo.ui \
@@ -2339,16 +2414,21 @@ debug/main.o: ../dashboard/main.cpp C:/Qt/5.4/mingw491_32/include/QtWidgets/QApp
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/QSlider \
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/QVBoxLayout \
 		../dashboard/form_botonera_hombremuerto.h \
-		../dashboard/formaceite.h \
-		C:/Qt/5.4/mingw491_32/include/QtQuick/QQuickView \
-		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickview.h \
-		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickwindow.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QFinalState \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/QQuickItem \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickitem.h \
 		C:/Qt/5.4/mingw491_32/include/QtQuick/qtquickglobal.h \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqml.h \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlprivate.h \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlparserstatus.h \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlpropertyvaluesource.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qqmllist.h
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmllist.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlcomponent.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QTimer \
+		../dashboard/formaceite.h \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/QQuickView \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickview.h \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\dashboard\main.cpp
 
 debug/speedconverter.o: ../dashboard/speedconverter.cpp ../dashboard/speedconverter.h \
@@ -3017,10 +3097,9 @@ debug/dialog.o: ../dashboard/dialog.cpp ../dashboard/dialog.h \
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/QSlider \
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/QVBoxLayout \
 		../dashboard/form_botonera_hombremuerto.h \
-		../dashboard/formaceite.h \
-		C:/Qt/5.4/mingw491_32/include/QtQuick/QQuickView \
-		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickview.h \
-		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickwindow.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QFinalState \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/QQuickItem \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickitem.h \
 		C:/Qt/5.4/mingw491_32/include/QtQuick/qtquickglobal.h \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqml.h \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlprivate.h \
@@ -3028,6 +3107,14 @@ debug/dialog.o: ../dashboard/dialog.cpp ../dashboard/dialog.h \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlparserstatus.h \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlpropertyvaluesource.h \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqmllist.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlcomponent.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlerror.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qjsvalue.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QTimer \
+		../dashboard/formaceite.h \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/QQuickView \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickview.h \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickwindow.h \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqmldebug.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\dialog.o ..\dashboard\dialog.cpp
 
@@ -3305,11 +3392,30 @@ debug/botonerapuerta.o: ../dashboard/botonerapuerta.cpp ../dashboard/botonerapue
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/QVBoxLayout \
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/QWidget \
 		../dashboard/form_botonera_hombremuerto.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QFinalState \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qfinalstate.h \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/QQuickItem \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickitem.h \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qtquickglobal.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqml.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlprivate.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qtqmlglobal.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlparserstatus.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlpropertyvaluesource.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmllist.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qmetaobject.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlcomponent.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlerror.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qjsvalue.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QList \
+		C:/Qt/5.4/mingw491_32/include/QtGui/qaccessible.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QTimer \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qtimer.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qbasictimer.h \
 		../dashboard/formaceite.h \
 		C:/Qt/5.4/mingw491_32/include/QtQuick/QQuickView \
 		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickview.h \
 		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickwindow.h \
-		C:/Qt/5.4/mingw491_32/include/QtQuick/qtquickglobal.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qopengl.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qt_windows.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qopengles2ext.h \
@@ -3320,13 +3426,6 @@ debug/botonerapuerta.o: ../dashboard/botonerapuerta.cpp ../dashboard/botonerapue
 		C:/Qt/5.4/mingw491_32/include/QtCore/QRect \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qsurface.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qsurfaceformat.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qqml.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlprivate.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qtqmlglobal.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlparserstatus.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlpropertyvaluesource.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qqmllist.h \
-		C:/Qt/5.4/mingw491_32/include/QtCore/qmetaobject.h \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqmldebug.h \
 		../dashboard/dialog.h \
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/QtWidgets \
@@ -3373,7 +3472,6 @@ debug/botonerapuerta.o: ../dashboard/botonerapuerta.cpp ../dashboard/botonerapue
 		C:/Qt/5.4/mingw491_32/include/QtCore/qjsonobject.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qabstracteventdispatcher.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qabstractnativeeventfilter.h \
-		C:/Qt/5.4/mingw491_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qmath.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qmimedata.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qobjectcleanuphandler.h \
@@ -3382,7 +3480,6 @@ debug/botonerapuerta.o: ../dashboard/botonerapuerta.cpp ../dashboard/botonerapue
 		C:/Qt/5.4/mingw491_32/include/QtCore/qsignalmapper.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qsocketnotifier.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qsystemsemaphore.h \
-		C:/Qt/5.4/mingw491_32/include/QtCore/qtimer.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qtranslator.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qwineventnotifier.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qmimedatabase.h \
@@ -3394,7 +3491,6 @@ debug/botonerapuerta.o: ../dashboard/botonerapuerta.cpp ../dashboard/botonerapue
 		C:/Qt/5.4/mingw491_32/include/QtCore/quuid.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qabstracttransition.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qeventtransition.h \
-		C:/Qt/5.4/mingw491_32/include/QtCore/qfinalstate.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qhistorystate.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qsignaltransition.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qexception.h \
@@ -3432,7 +3528,6 @@ debug/botonerapuerta.o: ../dashboard/botonerapuerta.cpp ../dashboard/botonerapue
 		C:/Qt/5.4/mingw491_32/include/QtCore/qtcoreversion.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/QtGui \
 		C:/Qt/5.4/mingw491_32/include/QtGui/QtGuiDepends \
-		C:/Qt/5.4/mingw491_32/include/QtGui/qaccessible.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qaccessiblebridge.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qaccessibleobject.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qaccessibleplugin.h \
@@ -3464,7 +3559,6 @@ debug/botonerapuerta.o: ../dashboard/botonerapuerta.cpp ../dashboard/botonerapue
 		C:/Qt/5.4/mingw491_32/include/QtGui/QImage \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qrasterwindow.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qscreen.h \
-		C:/Qt/5.4/mingw491_32/include/QtCore/QList \
 		C:/Qt/5.4/mingw491_32/include/QtCore/QSize \
 		C:/Qt/5.4/mingw491_32/include/QtCore/QSizeF \
 		C:/Qt/5.4/mingw491_32/include/QtGui/QTransform \
@@ -4247,6 +4341,34 @@ debug/form_botonera_hombremuerto.o: ../dashboard/form_botonera_hombremuerto.cpp 
 		C:/Qt/5.4/mingw491_32/include/QtCore/qfiledevice.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QState \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qstate.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qabstractstate.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QFinalState \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qfinalstate.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QStateMachine \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qstatemachine.h \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/QQuickItem \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickitem.h \
+		C:/Qt/5.4/mingw491_32/include/QtQuick/qtquickglobal.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqml.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlprivate.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qtqmlglobal.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlparserstatus.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlpropertyvaluesource.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmllist.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qmetaobject.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlcomponent.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlerror.h \
+		C:/Qt/5.4/mingw491_32/include/QtQml/qjsvalue.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QObject \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QList \
+		C:/Qt/5.4/mingw491_32/include/QtGui/qaccessible.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qeventloop.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/QTimer \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qtimer.h \
+		C:/Qt/5.4/mingw491_32/include/QtCore/qbasictimer.h \
 		ui_form_botonera_hombremuerto.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/QVariant \
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/QAction \
@@ -4255,8 +4377,6 @@ debug/form_botonera_hombremuerto.o: ../dashboard/form_botonera_hombremuerto.cpp 
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/qactiongroup.h \
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/QApplication \
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/qapplication.h \
-		C:/Qt/5.4/mingw491_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.4/mingw491_32/include/QtCore/qeventloop.h \
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/qdesktopwidget.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qguiapplication.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qinputmethod.h \
@@ -4283,25 +4403,16 @@ debug/form_botonera_hombremuerto.o: ../dashboard/form_botonera_hombremuerto.cpp 
 		C:/Qt/5.4/mingw491_32/include/QtQuickWidgets/QQuickWidget \
 		C:/Qt/5.4/mingw491_32/include/QtQuickWidgets/qquickwidget.h \
 		C:/Qt/5.4/mingw491_32/include/QtQuick/qquickwindow.h \
-		C:/Qt/5.4/mingw491_32/include/QtQuick/qtquickglobal.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qopengl.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qt_windows.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qopengles2ext.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qopenglext.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qwindow.h \
-		C:/Qt/5.4/mingw491_32/include/QtCore/QObject \
 		C:/Qt/5.4/mingw491_32/include/QtCore/QEvent \
 		C:/Qt/5.4/mingw491_32/include/QtCore/QMargins \
 		C:/Qt/5.4/mingw491_32/include/QtCore/QRect \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qsurface.h \
 		C:/Qt/5.4/mingw491_32/include/QtGui/qsurfaceformat.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qqml.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlprivate.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qtqmlglobal.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlparserstatus.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qqmlpropertyvaluesource.h \
-		C:/Qt/5.4/mingw491_32/include/QtQml/qqmllist.h \
-		C:/Qt/5.4/mingw491_32/include/QtCore/qmetaobject.h \
 		C:/Qt/5.4/mingw491_32/include/QtQml/qqmldebug.h \
 		C:/Qt/5.4/mingw491_32/include/QtQuickWidgets/qtquickwidgetsglobal.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\form_botonera_hombremuerto.o ..\dashboard\form_botonera_hombremuerto.cpp
